@@ -1,188 +1,141 @@
-<div align="center">
-
-```
-┌─ AnantGupta.java ───────────────────────────────────────────────┐
-```
-
-</div>
-
 ```java
 package com.anantgupta;
 
 /**
- * Software Engineer Intern @ Growspace
- * B.Tech, Computer Science — VIT Vellore, Class of 2026
- * Based in Jaipur, Rajasthan, India
+ * System Engineer @ Tata Consultancy Services
+ * B.Tech Computer Science, VIT AP (2022–2026)
+ * Jaipur, Rajasthan, India
  */
 public class AnantGupta {
 
-    private static final String EMAIL    = "anantagarwal4946@gmail.com";
+    private static final String EMAIL    = "contactguptaanant@gmail.com";
     private static final String GITHUB   = "github.com/anantgupta001";
     private static final String LINKEDIN = "linkedin.com/in/anantgupta7628";
     private static final String LEETCODE = "leetcode.com/anantgupta001";
 
-    private final List<String> languages  = List.of("Java", "SQL", "JavaScript", "TypeScript");
-    private final List<String> frameworks = List.of("Spring Boot", "Angular", "React", "Next.js", "Flutter", "Node.js");
-    private final List<String> infra      = List.of("Kafka", "Redis", "PostgreSQL", "MySQL", "MongoDB", "GCP", "AWS", "Firebase");
-    private final List<String> tooling    = List.of("JUnit", "Mockito", "SonarQube", "Git");
+    private final List<String> languages = List.of("Java", "SQL");
+
+    private final List<String> frameworks = List.of(
+        "Spring Boot", "Node.js", "Express", "Angular",
+        "React", "Next.js", "Flutter"
+    );
+
+    private final List<String> databases = List.of(
+        "PostgreSQL", "MySQL", "MongoDB", "Redis"
+    );
+
+    private final List<String> technologies = List.of(
+        "Kafka", "GCP", "AWS", "Firebase",
+        "Git", "JUnit", "Mockito", "SonarQube"
+    );
 
     /**
-     * Current role @ Growspace — Jan 2026 to Present.
-     * Backend systems for a telecom SIM management platform
-     * operating at a scale of tens of millions of SIMs.
+     * Software Engineer @ TCS
+     * System Engineer | C1 Band
      */
     public void currentRole() {
-        buildAuthSystem("JWT", "Redis");
-        // login, logout, token refresh, password reset,
-        // cross-device session invalidation, concurrent session limits
+        // Currently working at Tata Consultancy Services.
+    }
 
-        designOrgHierarchy("Seed", "Root", "Child", "Orphan");
-        // multi-tenant hierarchy w/ org-level feature provisioning
-        // and fine-grained RBAC
-
-        optimizeRuleEngine("Kafka", "Redis", "Cron");
-        // event-driven rule engine, scalable evaluation across
-        // tens of millions of SIMs
-
-        executeFaultTolerant("email", "sms", "reporting", "inventory");
-        // Kafka fan-out patterns + idempotent event handlers
-
-        maintainCoverage(80); // JUnit + Mockito, enforced via SonarQube
+    /**
+     * SDE Intern @ Growspace | Jan 2026 – Jul 2026
+     * Clients: Google Pay, Wipro
+     */
+    public void previousRole() {
+        buildSessionManagement("Spring Boot", "Redis"); // 10K+ accounts
+        implementOrganizationRBAC(4000, 100, 70); // orgs, roles, permissions
+        automateSIMLifecycle(20_000_000L); // configurable rules
+        manageSIMTags(100_000); // bulk operations
+        generateAsyncReports(100_000); // XLSX, GCS
     }
 
     public static void main(String[] args) {
-        AnantGupta me = new AnantGupta();
-        me.currentRole();
-
-        System.out.println("Open to interesting backend & systems work.");
+        System.out.println("Building software. Learning. Contributing.");
     }
 }
 ```
 
-<div align="center">
-
-```
-└───────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
-<br>
-
-<div align="center">
-
-```
-┌─ open-source.log ────────────────────────────────────────────────┐
-```
-
-</div>
+┌─ open-source.log ─────────────────────────────────────────────────┐
 
 ```diff
 $ git log --oneline --stat --author="anantgupta001"
 
-dbeaver/dbeaver  (Java, SWT, Eclipse RCP, Maven)
-+ PR #41337  [APPROVED]  Theme-aware compiler log colors
-             Replaced hardcoded SWT colors with configurable theme
-             definitions, improving dark-theme accessibility.
+dbeaver/dbeaver  (Java, SWT, Eclipse RCP)
 
-+ PR #41349            Fixed theme-refresh regressions
-             Object editor panels and result grids retained stale
-             colors after Dark <-> Light theme switches. Resolved.
++ 6 MERGED PRs
+  SQL Editor, UI rendering and desktop platform infrastructure
 
-lichess-org/lila  (Scala, TypeScript, Play Framework)
-+ PR #20715            Fixed UI theming inconsistencies
-             Reusable adaptive hover styling for custom image
-             backgrounds.
++ Theme synchronization
+  Fixed theme inconsistencies across compiler logs, editor
+  panels and result grids after runtime theme changes.
 
-anantgupta001/ffcs-on-the-go  (JavaScript, HTML)
-+ PR #247    [MERGED]   Added VIT-AP campus support
-             Integrated campus-specific course & timetable data.
++ SQL Editor connection synchronization
+  Synchronized editor tabs, toolbars, connection indicators
+  and result tabs with active database connections.
+
++ Windows taskbar fix
+  Refactored platform initialization to prevent duplicate
+  taskbar icons while preserving cross-platform behavior.
 ```
 
-<div align="center">
+└─────────────────────────────────────────────────────────────────┘
 
-```
-└────────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
-<br>
-
-<div align="center">
-
-```
-┌─ projects.json ──────────────────────────────────────────────────┐
-```
-
-</div>
+┌─ projects.json ─────────────────────────────────────────────────┐
 
 ```json
 {
   "projects": [
     {
       "name": "VITor — Faculty Rating Platform",
-      "stack": ["Next.js", "React", "Firebase", "Tailwind CSS"],
+      "stack": ["Next.js", "Firebase", "Tailwind CSS"],
       "live": "vitor-facultyranker.vercel.app",
-      "description": "Full-stack anonymous faculty review platform covering 1,500+ faculty and 500+ reviews across all VIT campuses.",
+      "description": "Anonymous faculty review platform across VIT campuses, with 1,500+ faculty profiles and 500+ reviews.",
       "highlights": [
-        "Firebase authentication",
-        "campus-based access control",
-        "rate limiting",
-        "paginated review APIs"
+        "Authenticated review APIs",
+        "Campus-based authorization",
+        "Rate limiting",
+        "Paginated data access"
       ]
     },
     {
       "name": "CraVIT — Food Ordering Platform",
       "stack": ["Flutter", "Firebase", "Razorpay"],
       "repo": "github.com/anantgupta001/cravit",
-      "description": "Modular monorepo with separate student and seller apps.",
+      "description": "Cross-platform food ordering app built as a modular monorepo for students and vendors.",
       "highlights": [
-        "Firebase Auth",
-        "Razorpay payment integration",
-        "real-time push notifications via FCM"
+        "Google Sign-In",
+        "Razorpay payments",
+        "Real-time order notifications with FCM"
       ]
-    },
-    {
-      "name": "FFCS on the Go",
-      "stack": ["JavaScript", "HTML"],
-      "description": "Open-source course enrollment tool with a large active user base across VIT campuses."
     }
   ]
 }
 ```
 
-<div align="center">
+└─────────────────────────────────────────────────────────────────┘
 
-```
-└────────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
-<br>
-
-<div align="center">
-
-```
-┌─ ~/anantgupta — zsh ─────────────────────────────────────────────┐
-```
-
-</div>
+┌─ ~/anantgupta — zsh ────────────────────────────────────────────┐
 
 ```bash
 $ whoami --education
 
   Vellore Institute of Technology
-  B.Tech, Computer Science | 2022 – 2026 | CGPA: 8.39
+  B.Tech, Computer Science | 2022 – 2026
+  CGPA: 8.39
 
 $ whoami --stats
 
-  LeetCode      600+ problems solved · 1600+ contest rating
+  LeetCode      900+ problems solved · 1600+ rating
+  CodeVita       AIR 320
+
+$ whoami --achievements
+
+  Intern of the Month — Growspace
+  Smart India Hackathon — Finalist
 
 $ contact --me
 
-  Email      anantagarwal4946@gmail.com
+  Email      contactguptaanant@gmail.com
   LinkedIn   linkedin.com/in/anantgupta7628
   GitHub     github.com/anantgupta001
   LeetCode   leetcode.com/anantgupta001
@@ -190,10 +143,4 @@ $ contact --me
 $ _
 ```
 
-<div align="center">
-
-```
 └────────────────────────────────────────────────────────────────┘
-```
-
-</div>
